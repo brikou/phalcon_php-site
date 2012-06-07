@@ -141,12 +141,15 @@ abstract class UIElements
     }
 
     public static function disclaimer($translate){
-        echo '<div class="alert alert-info">
-        <a class="close" data-dismiss="alert" href="#">×</a>
-        ', $translate->_('disclaimer', array(
-            'framework' => '<a href="http://phalconphp.com">Phalcon PHP Framework</a>',
-            'official' => '<a href="https://www.php.net">'.$translate['accessOf'].'</a>'
-        )), '        
-        </div>';
+        if(Phalcon_Session::get('disclaimer')){
+            echo '<div class="alert alert-info">
+            <a class="close" data-dismiss="alert" href="#">×</a>
+            ', $translate->_('disclaimer', array(
+                'framework' => '<a href="http://phalconphp.com">Phalcon PHP Framework</a>',
+                'official' => '<a href="https://www.php.net">'.$translate['accessOf'].'</a>'
+            )), '        
+            </div>';
+            Phalcon_Session::set('disclaimer', true);
+        }
     }
 }

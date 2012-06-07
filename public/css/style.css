@@ -43,7 +43,10 @@ input, textarea, select, .uneditable-input {
 
 .navbar-inner {
     background-color: #9999CC;
-    background-image: -moz-linear-gradient(center top , #9999CC, #877EA5);    
+    background-image: -moz-linear-gradient(center top , #9999CC, #877EA5);
+    background-image: -webkit-linear-gradient(top, #9999CC, #877EA5);
+    background-image: -o-linear-gradient(top, #9999CC, #877EA5);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#9999CC', endColorstr='#877EA5', GradientType=0);
     padding: 5px;
     border-radius: 0px;
 }
@@ -51,6 +54,7 @@ input, textarea, select, .uneditable-input {
 .navbar-inner img {
     margin: 5px;
     margin-left: 10px;
+    float: left;
 }
 
 .navbar-menu {
@@ -69,7 +73,11 @@ input, textarea, select, .uneditable-input {
 }
 
 .navbar .nav .active > a, .navbar .nav .active > a:hover {    
+    background-color: #28283E;
     background-image: -moz-linear-gradient(center top , #28283E, #45456B);    
+    background-image: -webkit-linear-gradient(top, #28283E, #45456B);
+    background-image: -o-linear-gradient(top, #28283E, #45456B);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#28283E', endColorstr='#45456B', GradientType=0);
     border-radius: 5px;
     padding-right: 7px;
     padding-left: 7px;
@@ -90,6 +98,10 @@ input, textarea, select, .uneditable-input {
 
 article p {
     font-size: 14px;
+}
+
+article img {
+    max-width: 400px;
 }
 
 h2 a,
@@ -208,10 +220,15 @@ footer {
     background-color: #333333;    
     padding: 10px;
     color: #CCCCCC;
+    min-height: 60px;
 }
 
 footer a:link, footer a:visited {
     color: #CCCCCC;
+}
+
+footer .copyright {
+    float: left;
 }
 
 footer .language {

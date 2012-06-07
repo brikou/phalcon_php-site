@@ -10,5 +10,9 @@ $messages = array(
 	"sourceCode" => "Código Fuente completo",
 	"currentStable" => "Versión estable actual",
 	"oldStable" => "Versión estable anterior",
-	"otherDownloads" => "Otras Descargas"
+	"otherDownloads" => "Otras Descargas",
+	"winBinaries" => "Binarios para Windows",
+	"winBinariesEx" => "Encuentre binarios para windows e instaladores en",
+	"gnuPg" => "Llaves GPG",
+	"gnuPgEx" => "Las versiones han sido etiquetadas y firmadas en el repositorio %git%. Las siguientes llaves Goficiales nuPG  del administrador de versiones actual de PHP pueden usarse para verificar las etiquetas:"
 );

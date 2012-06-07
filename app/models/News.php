@@ -45,5 +45,18 @@ class News extends Phalcon_Model_Base {
 		return strftime('%d %b %Y', $this->published);
 	}
 
+	public function getCategoriesLinks($translate){
+		$categories = array();
+		foreach($this->getNewsCategories() as $newCategory){
+			$category = $newCategory->getCategories();
+			$categories[] = Phalcon_Tag::linkTo('news/tagged/'.$category->name, $translate[$category->name]);
+		}
+		return join(', ', $categories);
+	}
+
+	public function initialize(){
+		$this->hasMany('id', 'NewsCategories', 'news_id');
+	}
+
 }
 

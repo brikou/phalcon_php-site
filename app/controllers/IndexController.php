@@ -32,7 +32,14 @@ class IndexController extends ControllerBase
 			$this->loadMainTrans();
 			$this->loadCustomTrans('index');
 		}
-		return $this->_forward('index/index');
+
+		//Go to the last place 
+		$referer = $this->request->getHTTPReferer();
+		if(strpos($referer, $this->request->getHttpHost()."/")!==false){
+			return $this->response->setHeader("Location", $referer);
+		} else {
+			return $this->_forward("index/index");
+		}
 	}
 
 }

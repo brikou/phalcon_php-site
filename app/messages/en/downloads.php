@@ -10,5 +10,9 @@ $messages = array(
 	"sourceCode" => "Complete Source Code",
 	"currentStable" => "Current stable",
 	"oldStable" => "Old Stable",
-	"otherDownloads" => "Other Downloads"
+	"otherDownloads" => "Other Downloads",
+	"winBinaries" => "Windows Binaries",
+	"winBinariesEx" => "For the Windows binaries and installer, see",
+	"gnuPg" => "GPG Keys",
+	"gnuPgEx" => "The releases are tagged and signed in the %git% Repository. The follwing official GnuPG keys of the current PHP Release Manager can be used to verify the tags:"
 );

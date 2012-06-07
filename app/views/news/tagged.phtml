@@ -2,7 +2,9 @@
 
 use Phalcon_Tag as Tag;
 
-echo UIElements::disclaimer($mt);
+echo '<h2>News Archive - ', $tag, '</h2>';
+
+echo '<p>Here are the most important news items we have tagged with "', $tag, '" on PHP.net.</p><hr/>';
 
 foreach($news as $new){
 	echo '<article>

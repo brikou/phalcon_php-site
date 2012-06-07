@@ -3460,6 +3460,7 @@ href="http://conf.phpquebec.com/en/conf2006/">exciting conference</a>.
 </p>
 
 <hr />
+
 <a href="http://www.nyphpcon.com/"><img src="http://static.php.net/www.php.net/images/news/NYPHPCon06.gif" alt="NYPHPCon 2006" width="107" height="79" style="float: right;" /></a>
 <h1>NYPHPCon 2006</h1>
 <p>
@@ -6110,7 +6111,7 @@ releases to address security issues could be made until 2008-08-08.
     </div> 
 </div>
 
-<hr/ >
+<hr />
 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
@@ -7911,8 +7912,9 @@ foreach($entries as $entry){
 	$news = News::findFirst("short_title='$shortTitle'");
 	if($news==false){
 		$news = new News($modelManager);
+		$news->language = 'en';
 		$news->short_title = $shortTitle;
-		$news->title = addslashes($entry['title']);		
+		$news->title = addslashes($entry['title']);
 		$news->year = $entry['year'];
 		$news->published = $entry['published'];		
 		$news->updated = $entry['published'];

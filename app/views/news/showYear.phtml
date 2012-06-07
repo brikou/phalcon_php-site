@@ -2,12 +2,16 @@
 
 use Phalcon_Tag as Tag;
 
+echo '<h2>News Archive - ', $activeYear, '</h2>';
+
+echo '<p>Here are the most important news items we have published in ', $activeYear, ' on PHP.net.</p><hr/>';
+
 foreach($news as $new){
 	echo '<article>
 		<h2>', Tag::linkTo('news/'.$new->getUri(), $new->title), '</h2>
 		<ul class="postmetadata clearfix">
 			<li class="date">', $new->getPublishedDate(), '</li>	
-			<li class="tags"><a href="#">Releases</a></li>
+			<li class="tags">', $new->getCategoriesLinks($mt), '</li>
 		</ul>
 		', $new->content, '
 	</article><hr>';

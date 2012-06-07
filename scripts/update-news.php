@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 
 require 'app/config/config.php';
 
-$feedContent = file_get_contents("feed.xml");
+$feedContent = file_get_contents("feed.atom");
 
 $dom = DOMDocument::loadXML($feedContent);
 
@@ -52,7 +52,7 @@ foreach($entries as $entry){
 	$news = News::findFirst("short_title='$shortTitle'");
 	if($news==false){
 		$news = new News($modelManager);
-		$news->language = 'es';
+		$news->language = 'en';
 		$news->short_title = $shortTitle;
 		$news->title = $entry['title'];
 		$published = date_parse($entry['published']);
