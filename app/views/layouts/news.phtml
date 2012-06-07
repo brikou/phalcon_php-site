@@ -1,0 +1,28 @@
+<?php use Phalcon_Tag as Tag; ?>
+
+<div class="row">
+	<div class="span4 short-panel">
+		<h3>Latest news</h3>
+
+		<p>
+		 For the latest news, <?php echo Phalcon_Tag::linkTo('', 'check the homepage') ?></a>,
+		 or <a href="http://www.php.net/feed.atom">our Atom feed</a>.
+		</p>
+
+		<h3>Archives by year</h3>
+
+		<ul class="nav nav-list">
+			<?php
+				foreach($years as $row){
+					if($row->year==$activeYear){
+						echo '<li class="active">', Tag::linkTo('news/'.$row->year, $row->year), '</li>';
+					} else {
+						echo '<li>', Tag::linkTo('news/'.$row->year, $row->year), '</li>';
+					}
+				}
+			?>			
+		</ul>
+
+    </div>
+    <div class="span8 large-panel"><?php echo $this->getContent() ?></div>    
+</div>

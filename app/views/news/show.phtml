@@ -1,0 +1,12 @@
+<?php
+
+use Phalcon_Tag as Tag;
+
+echo '<article>
+	<h2>', Tag::linkTo('news/'.$new->getUri(), $new->title), '</h2>
+	<ul class="postmetadata clearfix">
+		<li class="date">', $new->getPublishedDate(), '</li>	
+		<li class="tags"><a href="#">Releases</a></li>
+	</ul>
+	', $new->content, '
+</article><hr>';

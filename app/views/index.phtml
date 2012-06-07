@@ -1,0 +1,25 @@
+<?php use Phalcon_Tag as Tag ?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="http://static.php.net/www.php.net/favicon.ico" />
+        <?php 
+        	echo Tag::getTitle();
+        	echo Tag::stylesheetLink('bootstrap/css/bootstrap.css');
+        	echo Tag::stylesheetLink('bootstrap/css/bootstrap-responsive.css');
+        	echo Tag::stylesheetLink('css/style.css'); 
+        ?>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="PHP official site Alternative design">
+        <meta name="author" content="Copyright © 2001-2012 The PHP Group">
+    </head>
+    <body>
+        <?php 
+                echo $this->getContent();
+        	echo Tag::javascriptInclude('js/jquery.min.js');
+        	echo Tag::javascriptInclude('bootstrap/js/bootstrap.js');
+        	echo Tag::javascriptInclude('js/prettify/prettify.js') 
+        ?>
+    </body>
+</html>
