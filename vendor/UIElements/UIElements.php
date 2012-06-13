@@ -141,7 +141,7 @@ abstract class UIElements
     }
 
     public static function disclaimer($translate){
-        if(Phalcon_Session::get('disclaimer')){
+        if(!Phalcon_Session::get('disclaimer')){
             echo '<div class="alert alert-info">
             <a class="close" data-dismiss="alert" href="#">×</a>
             ', $translate->_('disclaimer', array(
