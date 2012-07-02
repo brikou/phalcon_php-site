@@ -2,8 +2,8 @@
 
 class DownloadsController extends ControllerBase
 {
-	
-	public function initialize()
+
+    public function initialize()
     {
         $this->view->setTemplateAfter('main');
         Phalcon_Tag::setTitle('Downloads');
@@ -11,9 +11,9 @@ class DownloadsController extends ControllerBase
         parent::initialize();
     }
 
-	public function indexAction()
-	{
-		
-	}
+    public function indexAction()
+    {
+
+    }
 
 }
