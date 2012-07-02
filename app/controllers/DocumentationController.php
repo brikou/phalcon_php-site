@@ -2,17 +2,17 @@
 
 class DocumentationController extends ControllerBase
 {
-	
-	public function initialize()
+
+    public function initialize()
     {
         $this->view->setTemplateAfter('main');
         Phalcon_Tag::setTitle('Documentation');
         parent::initialize();
     }
 
-	public function indexAction()
-	{
-		
-	}
+    public function indexAction()
+    {
+
+    }
 
 }
