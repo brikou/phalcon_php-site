@@ -16,5 +16,4 @@ class Categories extends Phalcon_Model_Base
     {
         $this->hasMany('id', 'NewsCategories', 'categories_id');
     }
-
 }

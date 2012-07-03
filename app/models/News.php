@@ -62,5 +62,4 @@ class News extends Phalcon_Model_Base
     {
         $this->hasMany('id', 'NewsCategories', 'news_id');
     }
-
 }

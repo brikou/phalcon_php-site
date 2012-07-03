@@ -3,12 +3,9 @@
 error_reporting(E_ALL);
 
 try {
-
-    $basePath = __DIR__.'/';
-
-    require $basePath.'../app/config/config.php';
-    require $basePath.'../app/config/routes.php';
-    require $basePath.'../vendor/loader.php';
+    require __DIR__.'/../app/config/config.php';
+    require __DIR__.'/../app/config/routes.php';
+    require __DIR__.'/../vendor/loader.php';
 
     Phalcon_Session::start();
 

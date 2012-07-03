@@ -2,7 +2,6 @@
 
 class AboutController extends ControllerBase
 {
-
     public function initialize()
     {
         $this->view->setTemplateAfter('main');
@@ -12,7 +11,5 @@ class AboutController extends ControllerBase
 
     public function indexAction()
     {
-
     }
-
 }

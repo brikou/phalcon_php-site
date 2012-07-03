@@ -2,7 +2,6 @@
 
 class ControllerBase extends Phalcon_Controller
 {
-
     protected function _getTransPath()
     {
         $translationPath = '../app/messages/';
@@ -10,7 +9,7 @@ class ControllerBase extends Phalcon_Controller
         if (!$language) {
             Phalcon_Session::set("language", "en");
         }
-        if ($language=='es'||$language=='en') {
+        if ($language === 'es' || $language === 'en') {
             return $translationPath.$language;
         } else {
             return $translationPath.'en';
@@ -22,7 +21,6 @@ class ControllerBase extends Phalcon_Controller
      */
     public function loadMainTrans()
     {
-
         $translationPath = $this->_getTransPath();
         require $translationPath."/main.php";
 
@@ -38,10 +36,9 @@ class ControllerBase extends Phalcon_Controller
       /**
        * Loads a translation for the active controller
        */
-      public function loadCustomTrans($transFile)
-      {
-
-          $translationPath = $this->_getTransPath();
+    public function loadCustomTrans($transFile)
+    {
+        $translationPath = $this->_getTransPath();
         require $translationPath.'/'.$transFile.'.php';
 
         //Return a translation object
@@ -51,13 +48,11 @@ class ControllerBase extends Phalcon_Controller
 
         //Set $t as controller's translation object
         $this->view->setVar("t", $controllerTranslate);
-
-      }
+    }
 
     public function initialize()
     {
         Phalcon_Tag::prependTitle('PHP: ');
         $this->loadMainTrans();
     }
-
 }

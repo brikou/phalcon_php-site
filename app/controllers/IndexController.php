@@ -2,7 +2,6 @@
 
 class IndexController extends ControllerBase
 {
-
     public function initialize()
     {
         $this->view->setTemplateAfter('main');
@@ -13,10 +12,9 @@ class IndexController extends ControllerBase
 
     public function indexAction()
     {
-
         $language = Phalcon_Session::get('language');
         $news = News::find(array("language='$language'", "limit" => 5, "order" => "published desc"));
-        if (count($news) == 0) {
+        if (count($news) === 0) {
             $news = News::find(array("language='en'", "limit" => 5, "order" => "published desc"));
         }
 
@@ -41,5 +39,4 @@ class IndexController extends ControllerBase
             return $this->_forward("index/index");
         }
     }
-
 }

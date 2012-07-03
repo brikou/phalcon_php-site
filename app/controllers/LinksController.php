@@ -2,7 +2,6 @@
 
 class LinksController extends ControllerBase
 {
-
     public function initialize()
     {
         $this->view->setTemplateAfter('main');
@@ -12,7 +11,5 @@ class LinksController extends ControllerBase
 
     public function indexAction()
     {
-
     }
-
 }

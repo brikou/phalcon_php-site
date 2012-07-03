@@ -22,5 +22,4 @@ class NewsCategories extends Phalcon_Model_Base
         $this->belongsTo('news_id', 'News', 'id');
         $this->belongsTo('categories_id', 'Categories', 'id');
     }
-
 }

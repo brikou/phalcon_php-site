@@ -2,7 +2,6 @@
 
 class NewsController extends ControllerBase
 {
-
     public function initialize()
     {
         $this->view->setTemplateAfter(array('main'));
@@ -21,7 +20,6 @@ class NewsController extends ControllerBase
 
     public function showAction()
     {
-
         $title = $this->_getSanizitedTitleId();
 
         $new = News::findFirst("short_title='$title'");
@@ -40,7 +38,6 @@ class NewsController extends ControllerBase
 
     public function showYearAction()
     {
-
         $activeYear = $this->filter->sanitize($this->_getParam('year'), "int");
 
         Phalcon_Tag::setTitle('News');
@@ -52,7 +49,6 @@ class NewsController extends ControllerBase
 
     public function taggedAction($tag)
     {
-
         $tag = $this->filter->sanitize($tag, "alphanum");
 
         Phalcon_Tag::setTitle('Tagged '.$tag);
@@ -73,5 +69,4 @@ class NewsController extends ControllerBase
         $this->view->setVar("news", $news);
         $this->view->setVar("years", News::count(array('group' => 'year')));
     }
-
 }
