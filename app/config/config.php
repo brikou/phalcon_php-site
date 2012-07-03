@@ -2,16 +2,16 @@
 
 $config = new Phalcon_Config(array(
     'database' => array(
-        'adapter' => 'Mysql',
+        'adapter' => 'mysql',
         'host' => 'localhost',
-        'username' => 'phalcon',
-        'password' => 'secret',
+        'username' => 'root',
+        'password' => '',
         'name' => 'php_site'
     ),
     'phalcon' => array(
         'controllersDir' => '../app/controllers/',
         'modelsDir' => '../app/models/',
         'viewsDir' => '../app/views/',
-        'baseUri' => '/blahblah/'
-    )
+        'baseUri' => '/php-site/public/'
+    ),
 ));
